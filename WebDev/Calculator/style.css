@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #24272E;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color:#24272E;
+    background-color: white;
+}
+.container{
+    color: antiquewhite;
+    min-height:550px;
+    width:350px;
+    background-color: #212121;
+    margin: 70px auto 0 auto;
+    border-radius: 10px;
+}
+.output{
+    /* min-height: 110px; */
+    padding:10px;
+    margin-bottom: 15px;
+}
+#history{
+    overflow:auto;
+    padding: 5px;
+    margin:0 10px;
+    font-size: 15px;
+    min-height: 50px;
+    text-align:right;
+}
+#current{
+    overflow:auto;
+    padding: 5x;
+    margin: 0 10px;
+    min-height: 50px;
+    font-size: 45px;
+    text-align: right; /*this worked better than float:right*/
+}
+.keyboard{
+    border-radius: 10px;
+    justify-content: center;
+    padding:15px;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 10px;
+}
+.operator, .number, .other{
+    color:white;
+    background-color: black;
+    width:70px;
+    height: 70px;
+    border-radius: 50vh;
+    border-width: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+.operator:focus, .number:focus, .other:focus{ /*focus implies usuallt tapped/clicked*/
+    outline: 0; /* when clicked it wont show that ugly default otline */
+}
+.operator{
+    border: 2px solid crimson;
+}
+button:nth-child(20){ /**this selects nth element of the mentioned type*/
+    background-color: crimson;
+}
+button:nth-child(20):hover{
+    background-color: rgba(220,20,60,0.8);
+}
+button:hover{
+    background-color: #24272E;
+}
+#message{
+    color: antiquewhite;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}

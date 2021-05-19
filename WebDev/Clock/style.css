@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+body{
+    background-color: #101820FF;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid antiquewhite;
+    border-radius: 50%;
+    height:300px;
+    width: 300px; */
+    position: relative;
+    top:50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+}
+#digital{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid antiquewhite;
+    border-radius: 50%;
+    height:300px;
+    width: 300px;
+    position: absolute;
+    background-color: #101820FF;
+    z-index: 1;
+}
+#hr,#min{
+    font-size: 70px;
+}
+#hr,#min,#sec{
+    padding: 15px;
+}
+#analog{
+    position: absolute;
+    height:600px;
+    width: 600px;
+    border: 2px solid antiquewhite;
+    border-radius: 50%;
+    z-index: -1;
+}
+#date{
+    position: absolute;
+    bottom: 350px;
+}
+.needle {
+	transition: all 0.5s ease-in;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform-origin: bottom center;
+    height: 280px;
+	width: 3px;
+    z-index: -1;
+    /* position: absolute; */
+}
+
+.needle.hour {
+	transform: translate(-50%, -100%) rotate(0deg);
+    background-color: white;
+    height: 200px;
+    width: 10px;
+}
+
+.needle.minute {
+	transform: translate(-50%, -100%) rotate(60deg);
+	/* height: 280px; */
+    background-color: white;
+}
+
+.needle.second {
+	background-color: #e74c3c;
+	/* height: 280px; */
+	transform: translate(-50%, -100%) rotate(120deg);
+}
+
+@media (max-width:650px){
+    #digital{
+        width: 150px;
+        height: 150px;
+    }
+    #analog{
+        width: 300px;
+        height: 300px;
+    }
+    #hr,#min,#sec{
+        font-size: 30px;
+        padding: 5px;
+    }
+    .needle{
+        height: 130px;
+    }
+    .needle.hour{
+        height:100px;
+        width: 8px;
+    }
+    #date{
+        bottom:180px;
+    }
+
+}
